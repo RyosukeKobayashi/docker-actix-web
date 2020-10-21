@@ -12,10 +12,11 @@ services:
       context: ./frontend
       target: "develop-stage"
     ports:
-      - "8080:8080"
+      - "8080:3000"
     volumes:
       - "./frontend:/app"
-    command: /bin/sh -c "yarn serve"
+    tty: true
+    command: /bin/sh -c "yarn start"
   backend:
     build:
       context: ./backend
