@@ -1,0 +1,1 @@
+pg_restore -U postgres -d water /docker-entrypoint-initdb.d/water.tar
