@@ -35,7 +35,7 @@ async fn main() -> std::io::Result<()> {
       .route("/users", web::post().to(handlers::add_user))
       .route("/users/{id}", web::delete().to(handlers::delete_user))
   })
-  .bind("0.0.0.0:8088")?
+  .bind(config.server_addr.clone())?
   .run()
   .await
 }
