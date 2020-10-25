@@ -42,7 +42,7 @@ services:
       - frontend
       - backend
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
 volumes:
   db_data:
   cargo-cache:
